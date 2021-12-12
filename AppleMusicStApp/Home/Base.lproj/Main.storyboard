@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -77,39 +78,39 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's Pick!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vID-hd-7fj">
-                                            <rect key="frame" x="20" y="30" width="185" height="36"/>
+                                            <rect key="frame" x="20" y="30" width="185" height="37"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9cZ-jh-VaU">
-                                            <rect key="frame" x="20" y="66" width="374" height="200"/>
+                                            <rect key="frame" x="20" y="67" width="374" height="200"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="200" id="p0t-Dl-nN9"/>
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBu-MO-q5Z">
-                                            <rect key="frame" x="20" y="66" width="374" height="200"/>
+                                            <rect key="frame" x="20" y="67" width="374" height="200"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <buttonConfiguration key="configuration" style="plain"/>
                                             <connections>
                                                 <action selector="cardTapped:" destination="yoW-5J-ILz" eventType="touchUpInside" id="5PQ-dp-KGY"/>
                                             </connections>
                                         </button>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ctA-Z1-EfJ">
-                                            <rect key="frame" x="349" y="226.5" width="35" height="34"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ctA-Z1-EfJ">
+                                            <rect key="frame" x="349" y="227.5" width="35" height="34"/>
                                             <color key="tintColor" systemColor="systemPinkColor"/>
+                                            <imageReference key="image" image="play.circle.fill" catalog="system" symbolScale="default"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7mt-iN-VCj">
-                                            <rect key="frame" x="30" y="210" width="75" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOn-BM-3Zh">
+                                            <rect key="frame" x="30" y="211" width="75" height="17"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U1b-c6-UYx" userLabel="PLAY NOW Today's pick is silo's album DDDD - .let's listem">
-                                            <rect key="frame" x="30" y="227" width="311" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sNW-iE-kQc">
+                                            <rect key="frame" x="30" y="228" width="275" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <string key="text">PLAY NOW
 Today's pick is silo's album
@@ -120,25 +121,25 @@ DDDD - .let's listem</string>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="ctA-Z1-EfJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sNW-iE-kQc" secondAttribute="trailing" constant="15" id="291-zL-Tat"/>
+                                        <constraint firstItem="9cZ-jh-VaU" firstAttribute="top" secondItem="vID-hd-7fj" secondAttribute="bottom" id="3jV-ud-fpy"/>
                                         <constraint firstItem="hBu-MO-q5Z" firstAttribute="top" secondItem="9cZ-jh-VaU" secondAttribute="top" id="8BB-ag-7la"/>
-                                        <constraint firstItem="7mt-iN-VCj" firstAttribute="leading" secondItem="9cZ-jh-VaU" secondAttribute="leading" constant="10" id="97a-uJ-jFg"/>
-                                        <constraint firstItem="ctA-Z1-EfJ" firstAttribute="bottom" secondItem="9cZ-jh-VaU" secondAttribute="bottom" constant="-5" id="A5N-x0-y31"/>
-                                        <constraint firstItem="U1b-c6-UYx" firstAttribute="top" secondItem="7mt-iN-VCj" secondAttribute="bottom" id="CCu-dS-Nmm"/>
+                                        <constraint firstItem="sNW-iE-kQc" firstAttribute="bottom" secondItem="9cZ-jh-VaU" secondAttribute="bottom" constant="-5" id="DY9-nN-vA3"/>
                                         <constraint firstAttribute="trailing" secondItem="9cZ-jh-VaU" secondAttribute="trailing" constant="20" id="F37-3o-oG1"/>
-                                        <constraint firstItem="U1b-c6-UYx" firstAttribute="leading" secondItem="9cZ-jh-VaU" secondAttribute="leading" constant="0.5" id="Fgh-in-9r0"/>
-                                        <constraint firstItem="ctA-Z1-EfJ" firstAttribute="leading" secondItem="U1b-c6-UYx" secondAttribute="trailing" constant="8" symbolic="YES" id="FyI-Jv-txG"/>
                                         <constraint firstItem="hBu-MO-q5Z" firstAttribute="leading" secondItem="9cZ-jh-VaU" secondAttribute="leading" id="G6C-DP-Bvr"/>
-                                        <constraint firstItem="9cZ-jh-VaU" firstAttribute="top" secondItem="vID-hd-7fj" secondAttribute="bottom" id="GYX-vw-c5c"/>
-                                        <constraint firstItem="vID-hd-7fj" firstAttribute="top" secondItem="yoW-5J-ILz" secondAttribute="top" constant="30" id="JHd-6B-czb"/>
-                                        <constraint firstItem="ctA-Z1-EfJ" firstAttribute="trailing" secondItem="9cZ-jh-VaU" secondAttribute="trailing" constant="-10" id="LER-jz-PWZ"/>
+                                        <constraint firstItem="vID-hd-7fj" firstAttribute="leading" secondItem="yoW-5J-ILz" secondAttribute="leading" constant="20" id="NxN-eA-lOW"/>
+                                        <constraint firstItem="KOn-BM-3Zh" firstAttribute="leading" secondItem="9cZ-jh-VaU" secondAttribute="leading" constant="10" id="RSc-ZX-gqJ"/>
                                         <constraint firstItem="hBu-MO-q5Z" firstAttribute="trailing" secondItem="9cZ-jh-VaU" secondAttribute="trailing" id="Ua3-k6-VDe"/>
-                                        <constraint firstItem="U1b-c6-UYx" firstAttribute="bottom" secondItem="9cZ-jh-VaU" secondAttribute="bottom" constant="-5" id="aHK-7g-Sf6"/>
+                                        <constraint firstItem="vID-hd-7fj" firstAttribute="top" secondItem="yoW-5J-ILz" secondAttribute="top" constant="30" id="aMd-xY-fcd"/>
+                                        <constraint firstItem="ctA-Z1-EfJ" firstAttribute="bottom" secondItem="9cZ-jh-VaU" secondAttribute="bottom" constant="-5" id="frW-Sm-jY4"/>
+                                        <constraint firstItem="sNW-iE-kQc" firstAttribute="top" secondItem="KOn-BM-3Zh" secondAttribute="bottom" id="hCd-bS-lif"/>
+                                        <constraint firstItem="ctA-Z1-EfJ" firstAttribute="trailing" secondItem="9cZ-jh-VaU" secondAttribute="trailing" constant="-10" id="o0M-Av-pIR"/>
                                         <constraint firstItem="hBu-MO-q5Z" firstAttribute="bottom" secondItem="9cZ-jh-VaU" secondAttribute="bottom" id="pAf-Tj-kY5"/>
                                         <constraint firstItem="9cZ-jh-VaU" firstAttribute="leading" secondItem="yoW-5J-ILz" secondAttribute="leading" constant="20" id="wSa-19-sEr"/>
-                                        <constraint firstItem="vID-hd-7fj" firstAttribute="leading" secondItem="yoW-5J-ILz" secondAttribute="leading" constant="20" id="z3D-6g-jIU"/>
+                                        <constraint firstItem="sNW-iE-kQc" firstAttribute="leading" secondItem="9cZ-jh-VaU" secondAttribute="leading" constant="10" id="yAy-Vv-Qll"/>
                                     </constraints>
                                     <connections>
-                                        <outlet property="descriptionLabel" destination="U1b-c6-UYx" id="u63-5A-vaN"/>
+                                        <outlet property="descriptionLabel" destination="sNW-iE-kQc" id="lwj-VO-zFo"/>
                                         <outlet property="thumbnailImageView" destination="9cZ-jh-VaU" id="WCJ-G6-TcE"/>
                                     </connections>
                                 </collectionReusableView>
